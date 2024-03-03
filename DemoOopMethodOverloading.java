@@ -25,7 +25,11 @@ public class DemoOopMethodOverloading {
 
         int result = obj.add(10, 20);
 
+        double result2 = obj.add(10.5, 20);
+
         System.out.println(result);
+
+        System.out.println(result2);
     }
     
 }
