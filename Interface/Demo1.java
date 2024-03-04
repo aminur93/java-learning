@@ -1,5 +1,9 @@
 package Interface;
 
+// class - class -> extends
+// class - interface -> implements
+// interface - interface -> extends
+
 interface A{
 
     int age = 44; // final and static by default
@@ -10,7 +14,17 @@ interface A{
     void config();
 }
 
-class B implements A
+interface X{
+
+    void run();
+}
+
+interface Y extends X{
+
+    void walk();
+}
+
+class B implements A, Y
 {
 
     @Override
@@ -22,7 +36,16 @@ class B implements A
     public void config() {
         System.out.println("Config method of class B");
     }
+
+    @Override
+    public void run() {
+        System.out.println(name + " is running...");
+    }
     
+
+    public void walk() {
+        System.out.println(name + " is walking...");
+    }
 }
 
 public class Demo1 {
@@ -32,6 +55,8 @@ public class Demo1 {
         B obj = new B();
         obj.show();
         obj.config();
+        obj.run();
+        obj.walk();
 
         System.out.println("Age: " + A.age);
         System.out.println("Name: " + A.name);
