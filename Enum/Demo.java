@@ -4,30 +4,63 @@ enum Status{
     PENDING, APPROVED, REJECTED
 }
 
+enum Laptop{
+    Dell(25000), HP(45000), Lenovo(125000), Acer;
+
+    private int price;
+
+    private Laptop() {
+        this.price = 10000;
+    }
+
+    private Laptop(int price) {
+        this.price = price;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+}
+
 public class Demo {
     
     public static void main(String args[])
     {
-        Status s = Status.PENDING;
 
+        Laptop lap = Laptop.Dell;
 
-        switch (s) {
-            case PENDING:
-                System.out.println("Pending your request");
-                break;
+        //System.out.println(lap + " price is " + lap.getPrice());
 
-            case APPROVED:
-                System.out.println("Approved your request");
-                break;
-
-            case REJECTED:
-                System.out.println("Rejected your request");
-                break;
-        
-            default:
-                System.out.println("Invalid Status");
-                break;
+        for(Laptop l : Laptop.values())
+        {
+            System.out.println(l + " price is " + l.getPrice());
         }
+
+        //Status s = Status.PENDING;
+
+        // System.out.println(s.getClass().getSuperclass());
+
+        // switch (s) {
+        //     case PENDING:
+        //         System.out.println("Pending your request");
+        //         break;
+
+        //     case APPROVED:
+        //         System.out.println("Approved your request");
+        //         break;
+
+        //     case REJECTED:
+        //         System.out.println("Rejected your request");
+        //         break;
+        
+        //     default:
+        //         System.out.println("Invalid Status");
+        //         break;
+        // }
 
         /* conditional enum status*/
         
