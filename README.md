@@ -7,3 +7,6 @@
     - if else elseif conditions
     - oop
     - some other important topic
+    - exception handling
+    - functional interface
+    - types of interfaces
