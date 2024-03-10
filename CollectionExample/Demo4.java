@@ -11,19 +11,19 @@ public class Demo4 {
 
         nums.forEach(n -> System.out.println(n));
 
-        // int sum = 0;
+        int sum = 0;
 
-        // for (int i : nums) {
+        for (int i : nums) {
 
-        // if (i % 2 == 0) {
+            if (i % 2 == 0) {
 
-        // i = i * 2;
-        // sum = sum + i;
-        // }
+                i = i * 2;
+                sum = sum + i;
+            }
 
-        // }
+        }
 
-        // System.out.println(sum);
+        System.out.println(sum);
 
     }
 }
